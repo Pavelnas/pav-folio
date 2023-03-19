@@ -1,42 +1,126 @@
 import React from "react";
 import styled from "styled-components";
 import { AiOutlineInstagram } from "react-icons/ai";
+import { AiOutlineGithub } from "react-icons/ai";
 import { GiEarthAmerica } from "react-icons/gi";
-import { FaLinkedinIn } from "react-icons/fa";
+import { SiUpwork } from "react-icons/si";
+import { FaLinkedinIn, FaDownload } from "react-icons/fa";
 import { Slide } from "react-awesome-reveal";
+import { ReactTerminal } from "react-terminal";
 
 const ProfComponent = () => {
+  const commands = {
+    whoami: "pavelnas",
+    "-h": () => (
+      <span>
+        Here's an example of a help message you can use for your terminal:
+        <br />
+        Welcome to Pav World - Help Menu
+        <br />
+        Here are some of the available commands and their descriptions:
+        <br />
+        <br />
+        - command1: [Description of command1]
+        <br />
+        <br />
+        - command2: [Description of command2]
+        <br />
+        <br />
+        - command3: [Description of command3]
+        <br />
+        <br />
+        - command4: [Description of command4]
+        <br />
+        <br />
+        - command5: [Description of command5]
+        <br />
+        <br />
+        For more information on a specific command, type "help [command]" (without quotes) to see its usage and additional details.
+        <br />
+        <br />
+        If you need further assistance or have any questions, please refer to the project documentation or contact the project maintainers for help.
+        <br />
+        Thank you for using [Your Project]!
+        <br />
+      </span>
+    ),
+    help: () => (
+      <span>
+        Here's an example of a help message you can use for your terminal:
+        <br />
+        Welcome to Pav World - Help Menu
+        <br />
+        Here are some of the available commands and their descriptions:
+        <br/>
+        <br/>
+        - command1: [Description of command1]
+        <br/>
+        <br/>
+        - command2: [Description of command2]
+        <br/>
+        <br/>
+        - command3: [Description of command3]
+        <br/>
+        <br/>
+        - command4: [Description of command4]
+        <br/>
+        <br/>
+        - command5: [Description of command5]
+        <br/>
+        <br/>
+        For more information on a specific command, type "help [command]" (without quotes) to see its usage and additional details.
+        <br/>
+        <br/>
+        If you need further assistance or have any questions, please refer to the project documentation or contact the project maintainers for help.
+        <br/>
+        Thank you for using [Your Project]!
+        <br/>
+      </span>
+    ),
+    refresh: () => window.location.reload(),
+    cd: (directory) => window.location.href = `#${directory}`,
+  };
+
+
   return (
+    <> 
     <Container id="home">
       <Slide direction="left">
         <Texts>
           <h4>
-            Hello <span className="green">I'am</span>
+            Hello <span className="orange">I'am</span>
           </h4>
-          <h1 className="green">Milad Amiri</h1>
-          <h3>UX/UI Designer and graphic designer</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-            iusto. Adipisci in qui officia provident tenetur sequi, deserunt
-            corporis quos?
+          <h1 className="orange">Ahmed Abdelkareem</h1>
+          <h3>Senior Software Engineer @ Yogobe</h3>
+          <p className="line17">
+            As a Senior software engineer, 
+            I have a wealth of experience in mentoring and leading backend teams, 
+            making technical decisions, and designing architectures that deliver high standards and code quality. 
+            I am proficient in provisioning and maintaining infrastructure through AWS services such as EKS, ECR, RDS, IAM, ElasticSearch, SecretsManager, and S3, including IaaC using Terraform. 
+            I am also skilled in developing middleware and components that can be configured to support all kinds of configurations using Ruby.
+            <br />
           </p>
-          <button>Let's talk</button>
+          <button href="/cv.pdf" download>
+            <FaDownload className="" />
+            <br />
+            Download my CV
+          </button>
           <Social>
             <p>Check out my</p>
             <div className="social-icons">
               <span>
-                <a href="/">
-                  <AiOutlineInstagram />
+                <a href="https://github.com/Pavelnas">
+                  <AiOutlineGithub />
                 </a>
               </span>
               <span>
-                <a href="/">
-                  <GiEarthAmerica />
-                </a>
-              </span>
-              <span>
-                <a href="/">
+                <a href="https://www.linkedin.com/in/ashraf-abdelkareem/">
                   <FaLinkedinIn />
+                </a>
+              </span>
+              <span>
+                <a href="https://www.upwork.com/freelancers/~01e2b9162c18b9bf2b">
+                  <SiUpwork />
                 </a>
               </span>
             </div>
@@ -46,12 +130,54 @@ const ProfComponent = () => {
       <Slide direction="right">
         <Profile>
           <img
-            src="https://res.cloudinary.com/ghazni/image/upload/v1659082282/Yt-portfolio/Untitled-1_drcspz.png"
+            src="https://raw.githubusercontent.com/Pavelnas/Pavelnas/master/IMG_0686.JPG"
             alt="profile"
           />
         </Profile>
       </Slide>
+
     </Container>
+      {/* <div style={{height: '35rem', padding: '4rem'}}>
+        <h2 className='orange' style={{'text-align': 'center'}}>Terminal</h2>
+        <br />
+        <ReactTerminal
+          welcomeMessage={
+            <div>
+                <span className="green">
+                Welcome to the Pav World!
+                <br />
+                <br />
+                You are now connected to pavelnas@localhost.
+                <br />
+                <br />
+                Feel free to explore the various commands and functionalities available in her. To get started, type "help or -h" to see a list of available commands.
+                <br />
+                <br />
+                If you encounter any issues or have any questions, please refer to my email info@pavelnas.com.
+                <br />
+                <br />
+                Thank you for visiting and happy exploring!
+                <br />
+                </span>
+              <br />
+            </div>
+          }
+          commands={commands}
+          showControlBar={false}
+          showControlButtons={false}
+          prompt="pavelnas@portfolio:~$"
+          themes={{
+            "pav-folio": {
+              themeBGColor: "rgb(56 58 59)",
+              themeToolbarColor: "#DBDBDB",
+              themeColor: "#FFFEFC",
+              themePromptColor: "#ec731c"
+            }
+          }}
+          theme="pav-folio"
+        />
+      </div> */}
+    </>
   );
 };
 
@@ -98,14 +224,10 @@ const Texts = styled.div`
     padding: 0.7rem 2rem;
     margin-top: 3rem;
     cursor: pointer;
-    background-color: #01be96;
+    background-color: #ec731c;
     border: none;
     color: #fff;
     font-weight: 500;
-    filter: drop-shadow(0px 10px 10px #01be9551);
-    :hover {
-      filter: drop-shadow(0px 10px 10px #01be9570);
-    }
   }
 `;
 const Social = styled.div`
@@ -128,7 +250,7 @@ const Social = styled.div`
       width: 2.3rem;
       height: 2rem;
       clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-      background-color: #01be96;
+      background-color: #ec731c;
       position: relative;
       transition: transform 400ms ease-in-out;
       :hover {
@@ -148,8 +270,8 @@ const Social = styled.div`
 const Profile = styled.div`
   img {
     width: 25rem;
-    filter: drop-shadow(0px 10px 10px #01be9570);
     transition: transform 400ms ease-in-out;
+    border-radius: 100%;
     @media (max-width: 790px) {
       width: 20rem;
     }

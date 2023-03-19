@@ -22,8 +22,20 @@ body{
   position: relative;
 }
 
+.orange {
+  color: #ec731c;
+}
+
 .green {
-  color: #01be96;
+  color: #155e12;
+}
+
+.black {
+  color: #000;
+}
+
+.line17 {
+  line-height: 1.7;
 }
 
 .slick-list, .slick-slider, .slick-track{
@@ -57,7 +69,8 @@ body{
 
 /* scroll bar style  */
 ::-webkit-scrollbar {
-  width: 10px;
+  /* width: 10px; */
+  display: none;
 }
 
 /* Track */

@@ -5,6 +5,7 @@ import { CgProfile } from "react-icons/cg";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { AiFillGithub, AiFillLinkedin, AiOutlineArrowUp } from "react-icons/ai";
 import { BsFacebook, BsSlack } from "react-icons/bs";
+import { SiUpwork } from "react-icons/si";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
 import { Slide, Zoom, Fade } from "react-awesome-reveal";
 
@@ -19,14 +20,14 @@ const Footer = () => {
     <Container id="footer">
       <Profile>
         <Slide direction="left" delay={1}>
-          <h1>Portfolio</h1>
+          <h1>Contacts</h1>
         </Slide>
         <div className="address">
           <Slide direction="left">
             <h1>Address:</h1>
           </Slide>
           <Slide direction="left">
-            <p>1030 Southwood Dr San Luis Obispo, California(CA), 93401</p>
+            <p>10 Ismael Wahby str, Block 54, Nasr City, Egypt.</p>
           </Slide>
         </div>
         <div className="links">
@@ -38,7 +39,7 @@ const Footer = () => {
               <FiPhoneCall />
             </span>
             <Slide direction="left">
-              <a href="tel:+4733378901">+47 333 78 901</a>
+              <a href="tel:+201116101883">+20 111 6101 883</a>
             </Slide>
           </div>
           <div>
@@ -48,7 +49,17 @@ const Footer = () => {
               </span>
             </Slide>
             <Slide>
-              <a href="mailto:miladamiri@gmail.com">miladamiri@gmail.com</a>
+              <a href="mailto:main@pavelnas.com">main@pavelnas.com</a>
+            </Slide>
+          </div>
+          <div>
+            <Slide direction="left">
+              <span>
+                <HiOutlineMailOpen />
+              </span>
+            </Slide>
+            <Slide>
+              <a href="mailto:ahmed.abdelkareeem@gmail.com">ahmed.abdelkareeem@gmail.com</a>
             </Slide>
           </div>
         </div>
@@ -59,29 +70,22 @@ const Footer = () => {
           <div className="icons">
             <Zoom>
               <span>
-                <a href="/">
+                <a href="https://github.com/Pavelnas">
                   <AiFillGithub />
                 </a>
               </span>
             </Zoom>
             <Zoom>
               <span>
-                <a href="/">
+                <a href="https://www.linkedin.com/in/ashraf-abdelkareem/">
                   <AiFillLinkedin />
                 </a>
               </span>
             </Zoom>
             <Zoom>
               <span>
-                <a href="/">
-                  <BsFacebook />
-                </a>
-              </span>
-            </Zoom>
-            <Zoom>
-              <span>
-                <a href="/">
-                  <BsSlack />
+                <a href="https://www.upwork.com/freelancers/~01e2b9162c18b9bf2b">
+                  <SiUpwork />
                 </a>
               </span>
             </Zoom>
@@ -93,31 +97,6 @@ const Footer = () => {
           </ArrowUp>
         </Fade>
       </Profile>
-      <Form>
-        <Slide direction="right">
-          <form>
-            <div className="name">
-              <span>
-                <CgProfile />
-              </span>
-              <input type="text" placeholder="Fullname..." />
-            </div>
-            <div className="email">
-              <span>
-                <MdAlternateEmail />
-              </span>
-              <input type="email" placeholder="Email..." />
-            </div>
-            <div className="message">
-              <span className="messageIcon">
-                <FiMail />
-              </span>
-              <textarea cols="30" rows="10" placeholder="Message..."></textarea>
-            </div>
-            <button>Submit</button>
-          </form>
-        </Slide>
-      </Form>
     </Container>
   );
 };
@@ -214,7 +193,7 @@ const Profile = styled.div`
 const ArrowUp = styled.div`
   width: 2rem;
   height: 2rem;
-  background-color: #01be96;
+  background-color: #ec731c;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -270,14 +249,10 @@ const Form = styled.div`
     button {
       width: 5rem;
       height: 1.8rem;
-      background-color: #01be96;
+      background-color: #ec731c;
       border: none;
       border-radius: 5px;
-      filter: drop-shadow(0px 4px 5px #01be9551);
       cursor: pointer;
-      :hover {
-        filter: drop-shadow(0px 6px 9px #01be9551);
-      }
     }
   }
 `;

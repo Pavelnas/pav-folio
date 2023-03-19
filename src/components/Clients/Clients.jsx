@@ -83,7 +83,7 @@ const Clients = () => {
   return (
     <Container id='client'>
         <Slide direction="left">
-            <span className="green">testimonials</span>
+            <span className="orange">testimonials</span>
             <h1>what clients say</h1>
         </Slide>
         <Testimonials>
@@ -149,7 +149,7 @@ const Container = styled.div`
     }
     
     .slick-dots li.slick-active button{
-        background: #01be96;
+        background: #ec731c;
         width: 15px;
     }
 
@@ -171,7 +171,7 @@ const Buttons = styled.div`
         background-color: transparent;
         margin-left: 0.5rem;
         border: none;
-        color: #01be96;
+        color: #ec731c;
         cursor: pointer;
         font-size: 1.1rem;
     }
